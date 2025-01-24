@@ -1,0 +1,632 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Pacifico&family=Poppins:wght@200;300;400;500&display=swap");
+
+:root {
+  --background: #ffdf50;
+  --background2: #000;
+  --color: #222;
+  --color2: #fff;
+  --border: 2px solid #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: var(--color);
+}
+
+section {
+  padding: 4.5rem 3rem 0 3rem;
+}
+.btn {
+  margin-top: 2rem;
+}
+
+.btn a {
+  background: var(--background);
+  color: var(--color);
+  border-radius: 0.5rem;
+  padding: 0.5rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+.btn a:hover {
+  color: var(--color2);
+  background: #222;
+}
+
+.border {
+  border-bottom: 2px solid #000;
+  margin: 1.5rem 25%;
+}
+
+/* header */
+
+header {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--background);
+  position: sticky;
+}
+
+header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 3rem;
+}
+
+header .navbar .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  animation: slide 1s;
+}
+
+header .navbar .logo img {
+  width: 50px;
+}
+
+header .navbar .logo p {
+  font-size: 1.5rem;
+  color: var(--color);
+  font-weight: bolder;
+}
+
+header .navbar .navbar-container {
+  display: flex;
+  animation: slide 1s;
+}
+
+header .navbar .navbar-container a {
+  font-size: 1.2rem;
+  color: var(--color);
+  font-weight: 500;
+  padding: 1rem 1rem;
+}
+
+header .navbar .navbar-container a:hover {
+  color: #fff;
+  background: var(--background2);
+}
+
+button {
+  display: none;
+}
+
+@keyframes slide {
+  from {
+    filter: opacity(0);
+    transform: translateY(-20px);
+  }
+  to {
+    filter: opacity(1);
+    transform: translateY(0);
+  }
+}
+
+/* hero */
+
+.hero {
+  height: 85vh;
+}
+
+.hero .hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  padding: 2rem 3rem;
+}
+
+.hero .hero-container .hero-content {
+  text-align: left;
+  padding: 1rem;
+  display: block;
+  animation: slideside1 1s;
+}
+
+.hero .hero-container .hero-content h1 {
+  font-size: 3.5em;
+  color: var(--color2);
+  font-weight: bolder;
+  line-height: 1.2;
+  border: 5px solid var(--background);
+  padding: 0.5rem 0.5rem;
+  text-shadow: 2px 2px #000;
+}
+
+.hero .hero-container .hero-content p {
+  color: #444;
+  font-size: 1rem;
+}
+
+.hero .hero-container .hero-content .btn-hero {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.hero .hero-container .hero-content .btn-hero a {
+  padding: 0.5rem 2.5rem;
+  background: var(--background);
+  border-radius: 0.5rem;
+  color: var(--color);
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+
+.hero .hero-container .hero-content .btn-hero a:hover {
+  background: var(--color);
+  color: var(--color2);
+}
+
+.hero .hero-container .hero-img {
+  padding: 1rem;
+  animation: slideside2 1s;
+}
+
+.hero .hero-container .hero-img img {
+  width: 400px;
+  border: 5px solid var(--background);
+}
+
+#background {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.582), rgba(6, 9, 20, 0.596)),
+    url(../img/2d\ asset.jpg);
+  height: 58vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+}
+
+@keyframes slideside1 {
+  from {
+    filter: opacity(0);
+    transform: translateX(-20px);
+  }
+  to {
+    filter: opacity(1);
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideside2 {
+  from {
+    filter: opacity(0);
+    transform: translateX(20px);
+  }
+  to {
+    filter: opacity(1);
+    transform: translateX(0);
+  }
+}
+
+/* category */
+
+.category-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--color);
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3.5rem;
+}
+
+.category-container a {
+  padding: 1rem 2rem;
+  background: var(--background);
+  border-radius: 0.5rem;
+  color: var(--color);
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+
+.category-container a:hover {
+  color: var(--color2);
+  background: var(--color);
+}
+
+/* about */
+
+.about {
+  background-image: url(../img/background.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.about-container {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.about-container .about-img img {
+  width: 500px;
+  padding: 1rem;
+  border: 5px solid var(--background);
+}
+
+.about-container .about-text p {
+  font-size: 1.2rem;
+  color: var(--color);
+}
+
+/* service */
+
+.service {
+  background: var(--background2);
+  padding: 0;
+  margin-top: 3rem;
+  padding: 4.5rem 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.service h2 {
+  color: var(--color2);
+}
+
+.service-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.service-container .service-content {
+  display: block;
+  width: 400px;
+  border: 3px solid var(--background);
+  padding: 1rem;
+}
+
+.service-container .service-content:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.service-container .service-content img {
+  width: 100%;
+}
+
+.service-container .service-content h3 {
+  color: var(--color2);
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+.service-container .service-content p {
+  color: var(--color2);
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+/* order */
+
+.order-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.order-container .order-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  width: 500px;
+}
+
+.order-content {
+  text-align: center;
+}
+
+.order-content img {
+  background: var(--background2);
+  width: 100px;
+  padding: 1rem;
+}
+
+.order-content p {
+  color: var(--color);
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+
+.order-video video {
+  width: 500px;
+}
+
+.order .btn {
+  text-align: center;
+}
+
+/* contact */
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  margin-top: 3rem;
+}
+
+.contact-container .contact-form {
+  display: block;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 450px;
+  padding: 2rem;
+  border: 5px solid var(--background);
+  background: #fff;
+}
+
+.contact-container .contact-form input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  color: var(--color);
+  border-bottom: 3px solid var(--background);
+  margin-top: 2rem;
+  background: #f5f5f5;
+}
+
+.maps iframe {
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* sosmed */
+
+.sosmed p {
+  font-size: 1rem;
+  color: var(--color);
+  text-align: center;
+  margin-top: 2rem;
+  padding: 0 10rem;
+}
+
+.sosmed-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.sosmed-container img {
+  width: 50px;
+  margin-top: 2rem;
+}
+
+/* footer start */
+
+.footer {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-top: 5rem;
+  background: var(--background2);
+}
+
+.footer-container {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.footer-container .brand {
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-container .brand h2 {
+  color: #fff;
+}
+
+.footer-container .link {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.footer-container .link a {
+  color: var(--color2);
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.footer-container .address {
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.footer-container .address p {
+  font-size: 1rem;
+  color: var(--color2);
+  text-align: center;
+}
+
+.copyright {
+  background: var(--background);
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0;
+}
+
+.copyright p {
+  text-align: center;
+}
+
+/* footer end */
+
+@media (max-width: 991px) {
+  html {
+    font-size: 70%;
+  }
+
+  .hero .hero-container {
+    gap: 5%;
+  }
+
+  .hero .hero-container .hero-content p {
+    margin-top: 1rem;
+  }
+
+  .hero .hero-container .hero-img img {
+    width: 350px;
+  }
+
+  .about-container .about-img img {
+    width: 400px;
+  }
+
+  .service-container {
+    padding: 0 2rem;
+  }
+
+  .order-content img {
+    width: 80px;
+  }
+
+  .order-video video {
+    width: 400px;
+  }
+
+  .maps iframe {
+    width: 400px;
+    height: 300px;
+  }
+
+  .contact-container .contact-form {
+    height: 350px;
+  }
+
+  .sosmed-container img {
+    width: 40px;
+  }
+}
+
+@media (max-width: 759px) {
+  html {
+    font-size: 65.5%;
+  }
+
+  .hero {
+    height: 75vh;
+  }
+
+  .hero .hero-container .hero-img img {
+    width: 300px;
+  }
+
+  #background {
+    height: 50vh;
+  }
+
+  .about-container .about-img img {
+    width: 350px;
+  }
+
+  .order-content img {
+    width: 70px;
+  }
+
+  .order-video video {
+    width: 350px;
+  }
+
+  .maps iframe {
+    width: 350px;
+    height: 250px;
+  }
+
+  .contact-container .contact-form {
+    height: 300px;
+  }
+}
+
+@media (max-width: 595px) {
+  html {
+    font-size: 60%;
+  }
+
+  header .navbar .navbar-container {
+    display: none;
+  }
+
+  button {
+    display: inline-block;
+  }
+
+  .hero {
+    height: 115vh;
+  }
+
+  .hero-container {
+    flex-wrap: wrap;
+  }
+
+  .hero .hero-container .hero-content {
+    text-align: center;
+  }
+
+  .hero .hero-container .hero-content p {
+    color: var(--color2);
+  }
+
+  .hero .hero-container .hero-content .btn-hero {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .category-container {
+    flex-wrap: wrap;
+  }
+
+  .about-container {
+    flex-wrap: wrap;
+  }
+
+  .service-container {
+    flex-wrap: wrap;
+    gap: 4rem;
+  }
+
+  .order-container {
+    flex-wrap: wrap;
+  }
+
+  .contact-container {
+    flex-wrap: wrap;
+    gap: 4rem;
+  }
+
+  .sosmed p {
+    padding: 0 4rem;
+  }
+}
